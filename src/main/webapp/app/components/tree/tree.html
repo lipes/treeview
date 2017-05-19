@@ -1,0 +1,22 @@
+<div class="container">
+    <h3>Produtos</h3>
+    <hr>
+    <div class="row">
+        <div class="col-xs-6 icons">
+            <span class="glyphicon glyphicon-plus text-success" ng-click="modalTree('Adicionar')"></span>
+            <span class="glyphicon glyphicon-pencil text-info" ng-click="modalTree('Editar')"></span>
+            <span class="glyphicon glyphicon-trash text-danger" ng-click="removeTree()"></span>
+        </div>
+        <div class="col-xs-6 text-right icons">
+            <span class="glyphicon glyphicon-chevron-up" ng-click="collapseAll()"></span>
+            <span class="glyphicon glyphicon-chevron-down" ng-click="expandeAll()"></span>
+        </div>
+    </div>
+    <!-- <form> -->
+    <div class="form-group">
+        <input type="input" class="form-control" id="input-search" placeholder="Digite para filtrar..." value="" ng-keyup="search($event)">
+    </div>
+    <!-- </form> -->
+    <div id="tree"></div>
+    <ng-include src="'./app/components/tree/add-tree.html'"></ng-include>
+</div>

@@ -1,0 +1,16 @@
+<div class="panel panel-{{tipoMsg}}">
+  <div class="panel-heading">{{title}}
+  <button type="button" class="close pull-right" aria-label="Close" ng-click="fecharDialogBox(numberDialog)"><span aria-hidden="true">&times;</span></button></div>
+</div>
+<div class="modal-body">
+    <p ng-bind-html="msg"></p>
+</div>
+<div class="modal-footer">
+	<div class="form-group">
+		<div class="col-md-12 text-center">
+			<button type="button" class="btn btn-{{tipoMsg}} btn-sm" ng-if="type != 'CONFIRM'" ng-click="fecharDialogBox(numberDialog)">Fechar</button>
+			<button ng-show="botao.sim" type="button" class="btn btn-{{tipoMsg}} btn-sm" ng-click="botaoConfirmacao('sim', numberDialog)">SIM</button>
+			<button type="button" ng-show="botao.nao" class="btn btn-{{tipoMsg}} btn-sm" ng-click="botaoConfirmacao('nao',numberDialog)">NÃO</button>
+		</div>
+	</div>
+</div>
